@@ -9,7 +9,7 @@ public class Problem1Test {
     @Test
     public void zeroElement() {
         int[] inputs = {};
-        int expect = -3;
+        int expect = -4;
         int actual = Problem1.binarySearch(inputs, 9);
 
         assertEquals(expect, actual);
