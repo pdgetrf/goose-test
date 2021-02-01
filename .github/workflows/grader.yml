@@ -36,13 +36,13 @@ jobs:
       - name: Build with Maven
         run: mvn -B verify --file pom.xml
 
-  formatting:
+  checkstyle:
+    name: runner / checkstyle
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 # v2 minimum required
-      - uses: axel-op/googlejavaformat-action@v3
+      - uses: actions/checkout@v2
+      - uses: dbelyaev/action-checkstyle@master
         with:
-          args: "--skip-sorting-imports --replace"
-          # Recommended if you use MacOS:
           github_token: ${{ secrets.github_token }}
-          # githubToken: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          level: warning
