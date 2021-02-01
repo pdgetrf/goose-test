@@ -1,5 +1,10 @@
 public class Problem1 {
 
+  /**
+   * @param nums
+   * @param target
+   * @return
+   */
   public static int binarySearch(int[] nums, int target) {
     int start = 0;
     int end = nums.length - 1;
