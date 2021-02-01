@@ -8,7 +8,7 @@ public class Problem1Test {
     // DO NOT CHANGE
     @Test
     public void zeroElement() {
-        int[] inputs = {};
+        int inputs[] = {};
         int expect = -1;
         int actual = Problem1.binarySearch(inputs, 9);
 
