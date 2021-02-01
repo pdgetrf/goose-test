@@ -1,9 +1,10 @@
 public class Problem1 {
 
   /**
+   * binary search
    * @param nums
    * @param target
-   * @return
+   * @return index of the target, -1 if nothing found
    */
   public static int binarySearch(int[] nums, int target) {
     int start = 0;
