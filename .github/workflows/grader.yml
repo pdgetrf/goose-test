@@ -38,7 +38,7 @@ jobs:
 
   checkstyle_job:
     runs-on: ubuntu-latest
-    name: Checkstyle job
+    name: checkstyle job
     steps:
       - name: Checkout
         uses: actions/checkout@v2
