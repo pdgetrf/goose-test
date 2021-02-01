@@ -2,6 +2,7 @@ public class Problem1 {
 
   /**
    * binary search.
+   *
    * @param nums data to be searched in.
    * @param target target to search.
    * @return index of the target, -1 if nothing found.
