@@ -9,12 +9,12 @@
 name: css 143 grader
 
 on:
-  #  Uncomment the following two line to run test when you push to master in your own branch
-  #  push:
-  #    branches: [ master ]
-  pull_request:
+  # Uncomment the following two line to run test when you push to master in your own branch
+  push:
     branches: [ master ]
-    types: [opened, reopened, synchronize]
+  #pull_request:
+  #  branches: [ master ]
+  #  types: [opened, reopened, synchronize]
 
 jobs:
   run_tests:
