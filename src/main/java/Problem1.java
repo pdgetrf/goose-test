@@ -1,8 +1,19 @@
 public class Problem1 {
 
-    // do not change signature (function name, parameters)
-    public static int binarySearch(int[] data, int target) {
-        // add your solution
-        return -1; // place holder
+    public static int binarySearch(int[] nums, int target) {
+        int start = 0;
+        int end = nums.length - 1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            }
+            if (target > nums[mid]) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return -1;
     }
 }
