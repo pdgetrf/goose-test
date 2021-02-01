@@ -7,8 +7,7 @@ public class Problem1 {
             int mid =
                     (start + end) / 2;
             if (nums[mid] == target) {
-                return mid
-                        ;
+                return mid;
             }
             if (target > nums[mid]) {
                 start = mid + 1;
