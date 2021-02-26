@@ -11,16 +11,19 @@ do
   fi
 done < "$input"
 
-date=`date`
+todate=`TZ=PST8PDT date`
 
-todateepoch=$(date -d "$date" +%s)
+echo "today: $todate"
 
+echo "due date: $duedate"
+
+todateepoch=$(date -d "$todate" +%s)
 duedateepoch=$(date -d "$duedate" +%s)
 
-echo "$duedate - $todate" 
-
-if [ "$todateepoch" > "$duedateepoch" ] ;
+if [ "$todateepoch" -gt "$duedateepoch" ] ;
 then
     echo "your late"
+else
+    echo "still time"
 fi
 
