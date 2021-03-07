@@ -35,7 +35,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build with Maven
         run: mvn -B verify --file pom.xml
-      - name: Check dates
+      - name: Check due date 
         run: bash .github/workflows/script.sh
 
 
