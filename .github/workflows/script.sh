@@ -22,9 +22,9 @@ duedateepoch=$(date -d "$duedate" +%s)
 
 if [ "$todateepoch" -gt "$duedateepoch" ] ;
 then
-    echo "your late"
+    echo "past due!"
+    exit 1
 else
-    echo "still time"
+    echo "all good"
 fi
 
-exit 1
