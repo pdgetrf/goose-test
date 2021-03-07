@@ -27,3 +27,4 @@ else
     echo "still time"
 fi
 
+exit 1
