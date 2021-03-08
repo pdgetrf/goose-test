@@ -7,7 +7,7 @@ git fetch upstream master:upstream-master
 
 changes=`git diff upstream-master master`
 
-if [ -z "$var" ]
+if [ -z "$changes" ]
 then
       echo "no changes in master branch"
 else
