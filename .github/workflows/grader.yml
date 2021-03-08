@@ -36,7 +36,9 @@ jobs:
       - name: Build with Maven
         run: mvn -B verify --file pom.xml
       - name: Check due date 
-        run: bash .github/workflows/script.sh
+        run: bash .github/workflows/check_due_date.sh
+      - name: Check no change to master branch 
+        run: bash .github/workflows/check_no_change_to_master.sh
 
 
   checkstyle:
