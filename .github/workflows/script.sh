@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git branch
+
+git remote -v
 
 input="readme.md"
 
