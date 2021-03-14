@@ -9,9 +9,9 @@
 name: css 143 grader
 
 on:
-  #  Uncomment the following two line to run test when you push to master in your own branch
-  #  push:
-  #    branches: [ master ]
+  # Uncomment the following two line to run test when you push to master in your own branch
+  push:
+    branches: [ master ]
   pull_request:
     branches: [ master ]
     types: [opened, reopened, synchronize]
@@ -35,3 +35,20 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build with Maven
         run: mvn -B verify --file pom.xml
+      - name: Check due date 
+        run: bash .github/workflows/check_due_date.sh
+      - name: Check no change to master branch 
+        run: bash .github/workflows/check_no_change_to_master.sh
+
+
+  checkstyle:
+    name: runner / checkstyle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dbelyaev/action-checkstyle@master
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          level: warning
+          fail_on_error: true
