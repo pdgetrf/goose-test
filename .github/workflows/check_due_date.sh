@@ -21,6 +21,7 @@ echo "today: $todate"
 echo "due date: $duedate"
 
 todateepoch=$(date -d "$todate" +%s)
+
 duedateepoch=$(date -d "$duedate" +%s)
 
 if [ "$todateepoch" -gt "$duedateepoch" ] ;
